@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirportsDistanceCalculator.Web", "AirportsDistanceCalculator.Web.csproj", "{48F114AA-CE4E-4EC5-A98B-794220AD5249}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirportsDistanceCalculator.ApplicationService", "..\AirportsDistanceCalculator.ApplicationService\AirportsDistanceCalculator.ApplicationService.csproj", "{B26F47DD-2C85-44D9-AF88-A2866285133E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirportsDistanceCalculator.Infrastructure", "..\AirportsDistanceCalculator.Infrastructure\AirportsDistanceCalculator.Infrastructure.csproj", "{D51EFF12-EC0B-4187-8A5B-01D966D321C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirportsDistanceCalculator.Core", "..\AirportsDistanceCalculator.Core\AirportsDistanceCalculator.Core.csproj", "{4D03D82E-D7FF-46AF-AE09-0E8D908C502F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportsDistanceCalculator.Tests", "..\AirportsDistanceCalculator.Tests\AirportsDistanceCalculator.Tests.csproj", "{2F14CC19-40DE-40BB-B3E1-2D5A36B4306D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48F114AA-CE4E-4EC5-A98B-794220AD5249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48F114AA-CE4E-4EC5-A98B-794220AD5249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48F114AA-CE4E-4EC5-A98B-794220AD5249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48F114AA-CE4E-4EC5-A98B-794220AD5249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B26F47DD-2C85-44D9-AF88-A2866285133E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B26F47DD-2C85-44D9-AF88-A2866285133E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B26F47DD-2C85-44D9-AF88-A2866285133E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B26F47DD-2C85-44D9-AF88-A2866285133E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D51EFF12-EC0B-4187-8A5B-01D966D321C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D51EFF12-EC0B-4187-8A5B-01D966D321C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D51EFF12-EC0B-4187-8A5B-01D966D321C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D51EFF12-EC0B-4187-8A5B-01D966D321C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D03D82E-D7FF-46AF-AE09-0E8D908C502F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D03D82E-D7FF-46AF-AE09-0E8D908C502F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D03D82E-D7FF-46AF-AE09-0E8D908C502F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D03D82E-D7FF-46AF-AE09-0E8D908C502F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F14CC19-40DE-40BB-B3E1-2D5A36B4306D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F14CC19-40DE-40BB-B3E1-2D5A36B4306D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F14CC19-40DE-40BB-B3E1-2D5A36B4306D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F14CC19-40DE-40BB-B3E1-2D5A36B4306D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A3602EB-2240-4553-993A-25527ABC5161}
+	EndGlobalSection
+EndGlobal
