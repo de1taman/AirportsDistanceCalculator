@@ -33,6 +33,7 @@ namespace AirportsDistanceCalculator.Infrastructure
 
             if (!_cache.TryGetValue(iata, out airportJsonData))
             {
+                //я бы в стартапе законфигурил чтобы base url сразу был задал, а тут бы достраивал только относительный путь
                 var url = $"https://places-dev.cteleport.com/airports/{iata}";
                 var response = await _httpClient.GetAsync(url);
 
@@ -45,8 +46,10 @@ namespace AirportsDistanceCalculator.Infrastructure
             }
             if (airportJsonData!=null)
             {
+                // () можно убрать
                 return new AirportInfo() { IATA = airportJsonData.IATA, Latitude = airportJsonData.Location.Lat, Longitude = airportJsonData.Location.Lon , Country= airportJsonData.Country };
             }
+            //else можно не писать. ну, сам оператор;
             else
             {
                 return null;

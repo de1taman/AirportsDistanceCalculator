@@ -13,6 +13,8 @@ namespace AirportsDistanceCalculator.ApplicationService
         {
             this.airportsServiceClient = airportsServiceClient;
         }
+        
+        //нет валидации входных параметров в запросе: iata code имеет длину строго 3 и состоит только из латинских букв
         public async Task<object> GetDistanceAsync(string departureIata, string arrivalIata)
         {
             AirportInfo departureAirport = await airportsServiceClient.GetAirportInfoByIataCode(departureIata.ToUpper());
@@ -24,6 +26,7 @@ namespace AirportsDistanceCalculator.ApplicationService
             var depatrureCoodr = new GeoCoordinate(departureAirport.Latitude, departureAirport.Longitude);
             var arrivalCoodr = new GeoCoordinate(arrivalAirport.Latitude, arrivalAirport.Longitude);
 
+            //а разве они могут быть нулами?
             if (depatrureCoodr!=null && arrivalCoodr != null)
             {
                 var distance = depatrureCoodr.GetDistanceTo(arrivalCoodr);
