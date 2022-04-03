@@ -1,11 +1,14 @@
 using AirportsDistanceCalculator.ApplicationService;
 using AirportsDistanceCalculator.Infrastructure;
+using AirportsDistanceCalculator.Web.Validators;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System;
 
 namespace AirportsDistanceCalculator
 {
@@ -28,7 +31,11 @@ namespace AirportsDistanceCalculator
             });
             services.AddScoped<IAirportService, AirportService>();
             services.AddMemoryCache();
-            services.AddHttpClient<AirportsServiceClient>();
+            services.AddHttpClient<AirportsServiceClient>(c=> 
+            {
+                c.BaseAddress = new Uri(Configuration["AirportServiceURL"]);
+            });
+            services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<V1GetDistanceRequestValidator>());
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

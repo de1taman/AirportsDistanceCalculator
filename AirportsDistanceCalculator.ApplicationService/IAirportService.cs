@@ -1,9 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using AirportsDistanceCalculator.Core;
+using System.Threading.Tasks;
 
 namespace AirportsDistanceCalculator.ApplicationService
 {
     public interface IAirportService
     {
-        Task<object> GetDistanceAsync(string departureIata, string arrivalIata);
+        Task<AirportsWithDistance> GetDistanceAsync(string departureIata, string arrivalIata);
     }
 }

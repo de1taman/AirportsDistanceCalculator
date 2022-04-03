@@ -11,7 +11,7 @@
         public string Name { get; set; }
         public AirportLocation Location { get; set; }
         public string Type { get; set; }
-        public class AirportLocation
+        internal class AirportLocation
         {
             public double Lon { get; set; }
             public double Lat { get; set; }

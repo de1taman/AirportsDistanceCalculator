@@ -33,7 +33,7 @@ namespace AirportsDistanceCalculator.Infrastructure
 
             if (!_cache.TryGetValue(iata, out airportJsonData))
             {
-                var url = $"https://places-dev.cteleport.com/airports/{iata}";
+                var url = $"airports/{iata}";
                 var response = await _httpClient.GetAsync(url);
 
                 if (response.IsSuccessStatusCode)
@@ -45,13 +45,10 @@ namespace AirportsDistanceCalculator.Infrastructure
             }
             if (airportJsonData!=null)
             {
-                return new AirportInfo() { IATA = airportJsonData.IATA, Latitude = airportJsonData.Location.Lat, Longitude = airportJsonData.Location.Lon , Country= airportJsonData.Country };
-            }
-            else
-            {
-                return null;
+                return new AirportInfo { Iata = airportJsonData.IATA, Latitude = airportJsonData.Location.Lat, Longitude = airportJsonData.Location.Lon , Country= airportJsonData.Country };
             }
             
+                return null;
         }
     }
 }

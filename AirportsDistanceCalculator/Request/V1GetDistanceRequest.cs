@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace AirportsDistanceCalculator.Web.Request
 {
+   
     public class V1GetDistanceRequest
     {
         public string DepartureIata { get; set; }
