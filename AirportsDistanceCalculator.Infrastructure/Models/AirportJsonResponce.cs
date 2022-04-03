@@ -4,6 +4,7 @@
     {
         public string Country { get; set; }
         public string CityIata { get; set; }
+        //Iata, спарсится нормально
         public string IATA { get; set; }
         public string TimezoneRegionName { get; set; }
         public string CountryIata { get; set; }
