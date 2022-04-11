@@ -5,18 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Device.Location.Portable" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\AirportsDistanceCalculator.Core\AirportsDistanceCalculator.Core.csproj" />
     <ProjectReference Include="..\AirportsDistanceCalculator.Infrastructure\AirportsDistanceCalculator.Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="System.Device">
-      <HintPath>..\..\..\..\..\..\Windows\WinSxS\amd64_system.device_b77a5c561934e089_4.0.15805.0_none_9b78e5772093e7ae\System.Device.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="System.Device.Location.Portable" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

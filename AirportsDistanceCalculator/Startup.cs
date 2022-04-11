@@ -31,7 +31,7 @@ namespace AirportsDistanceCalculator
             });
             services.AddScoped<IAirportService, AirportService>();
             services.AddMemoryCache();
-            services.AddHttpClient<AirportsServiceClient>(c=> 
+            services.AddHttpClient<IServiceClient, AirportsServiceClient>(c=> 
             {
                 c.BaseAddress = new Uri(Configuration["AirportServiceURL"]);
             });

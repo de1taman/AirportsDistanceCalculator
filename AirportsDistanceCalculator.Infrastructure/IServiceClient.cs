@@ -9,6 +9,6 @@ namespace AirportsDistanceCalculator.Infrastructure
 {
     public interface IServiceClient
     {
-        public  Task<AirportInfo> GetAirportInfoByIataCode(string iata);
+        public  Task<AirportInfo> GetAirportInfoByIataCodeFromApi(string iata);
     }
 }

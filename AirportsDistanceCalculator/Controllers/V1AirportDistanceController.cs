@@ -22,8 +22,9 @@ namespace AirportsDistanceCalculator.Web.Controllers
             var result = await _airportService.GetDistanceAsync(v1GetDistanceRequest.DepartureIata, v1GetDistanceRequest.ArrivalIata);
             if (result != null)
             {
-                return new V1GetDistanceResponse { Disance = result.Disance };
+                return Ok( new V1GetDistanceResponse { Disance = result.Disance });
             }
+            
             return BadRequest("Not found");
         }
     }
